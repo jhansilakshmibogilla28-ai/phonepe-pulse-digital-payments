@@ -1,11 +1,7 @@
 import pandas as pd
 import pytest
 
-from src.phonepe_analytics.validation import (
-    validate_output_files,
-    validate_transactions,
-)
-
+from src.phonepe_analytics.validation import validate_transactions
 
 def test_validate_transactions_pass():
     df = pd.DataFrame(
