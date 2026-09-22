@@ -17,6 +17,7 @@ def validate_transactions(df: pd.DataFrame) -> None:
         raise ValueError("Transaction dataset is empty.")
 
     missing = REQUIRED_TRANSACTION_COLUMNS - set(df.columns)
+
     if missing:
         raise ValueError(
             f"Missing required transaction columns: {sorted(missing)}"
